@@ -159,10 +159,6 @@ position0 = {
     z = 6377900.0;
 }
 @include "channelmod_rfsimu_LEO_satellite.conf"
-
-
-
-
 ```
 UICC = Universal Integrated Circuit Card, the software representation of the
 SIM/USIM in OAI.
@@ -281,6 +277,9 @@ UE ccc1: LCID 7: TX 12929878 RX 16187 bytes ------> PDU 4
 ```
 All four LCIDs (4–7) carrying traffic for both UEs simultaneously confirms all 8
 sessions across the 2-UE setup were active and correctly isolated.
+
+<img width="1362" height="561" alt="image" src="https://github.com/user-attachments/assets/0b85f60c-bee7-4343-9616-90f08a7c5127" />
+
 
 ## Conclusion
 
