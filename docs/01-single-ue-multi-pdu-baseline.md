@@ -25,6 +25,8 @@ INSERT INTO `SessionManagementSubscriptionData` (`ueid`, `servingPlmnid`, `singl
 ```
 Align the IMSI in the UE's UICC block with the row used in the database.
 
+The updated database file is in the Database folder: [oai_db.sql](../Database/oai_db_1UE_4PDU.sql)
+
 ### UPF Docker entrypoint — routing for each DNN's subnet
 
 `oai-cn5g/docker-compose.yaml` — the `oai-upf` service needs a custom entrypoint
