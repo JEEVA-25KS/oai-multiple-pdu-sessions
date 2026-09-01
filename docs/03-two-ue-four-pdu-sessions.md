@@ -53,6 +53,7 @@ INSERT INTO `SmfSelectionSubscriptionData` (`ueid`, `servingPlmnid`, `subscribed
 ```
 
 ### UPF entrypoint — routes for all 4 subnets
+`oai-cn5g/docker-compose.yaml` 
 
 ```yaml
 entrypoint: /bin/bash -c \
