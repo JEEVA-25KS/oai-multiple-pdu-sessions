@@ -51,6 +51,8 @@ INSERT INTO `SmfSelectionSubscriptionData` (`ueid`, `servingPlmnid`, `subscribed
 );
 -- repeat for UE 2
 ```
+The updated database file is in the Database folder: [oai_db.sql](../Database/oai_db_2UE_each_4PDU.sql)
+
 
 ### UPF entrypoint — routes for all 4 subnets
 `oai-cn5g/docker-compose.yaml` 
