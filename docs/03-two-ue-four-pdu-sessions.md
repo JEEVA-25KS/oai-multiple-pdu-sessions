@@ -83,28 +83,86 @@ entrypoint: /bin/bash -c \
 
 `ue.conf` (both UEs use the same filename; each system gets its own copy):
 ```
-# UE 1                                    # UE 2
-uicc0 = {                                 uicc0 = {
-  imsi = "001010000000001";                 imsi = "001010000000002";
-  key  = "fec86ba6...";                      key  = "fec86ba6...";
-  opc  = "C4244936...";                      opc  = "C4244936...";
-  pdu_sessions = ({                          pdu_sessions = ({
-    id = 1; dnn = "oai"; nssai_sst = 1;        id = 1; dnn = "oai"; nssai_sst = 1;
-    nssai_sd = 0xffffff; type = "IPV4";        nssai_sd = 0xffffff; type = "IPV4";
-  }, {                                        }, {
-    id = 2; dnn = "openairinterface";          id = 2; dnn = "openairinterface";
-    nssai_sst = 1; nssai_sd = 0xffffff;        nssai_sst = 1; nssai_sd = 0xffffff;
-    type = "IPV4V6";                            type = "IPV4V6";
-  }, {                                        }, {
-    id = 3; dnn = "ims"; nssai_sst = 1;         id = 3; dnn = "ims"; nssai_sst = 1;
-    nssai_sd = 0xffffff; type = "IPV4V6";       nssai_sd = 0xffffff; type = "IPV4V6";
-  }, {                                        }, {
-    id = 4; dnn = "default"; nssai_sst = 1;     id = 4; dnn = "default"; nssai_sst = 1;
-    nssai_sd = 0xffffff; type = "IPV4V6";       nssai_sd = 0xffffff; type = "IPV4V6";
-  });                                         });
-}                                          }
-position0 = { x=0.0; y=0.0; z=6377900.0; }
+## UE 1
+uicc0 = {
+    imsi = "001010000000001";
+    key = "fec86ba6eb707ed08905757b1bb44b8f";
+    opc = "C42449363BBAD02B66D16BC975D77CC1";
+    pdu_sessions = ({
+        id = 1;
+        dnn = "oai";
+        nssai_sst = 1;
+        nssai_sd = 0xffffff;
+        type = "IPV4";
+    }, {
+        id = 2;
+        dnn = "openairinterface";
+        nssai_sst = 1;
+        nssai_sd = 0xffffff;
+        type = "IPV4V6";
+    }, {
+        id = 3;
+        dnn = "ims";
+        nssai_sst = 1;
+        nssai_sd = 0xffffff;
+        type = "IPV4V6";
+    }, {
+        id = 4;
+        dnn = "default";
+        nssai_sst = 1;
+        nssai_sd = 0xffffff;
+        type = "IPV4V6";
+    });
+}
+position0 = {
+    x = 0.0;
+    y = 0.0;
+    z = 6377900.0;
+}
 @include "channelmod_rfsimu_LEO_satellite.conf"
+
+-----------------------------------------------------------------------------------------------------------------------
+# UE 2
+uicc0 = {
+    imsi = "001010000000002";
+    key = "fec86ba6eb707ed08905757b1bb44b8f";
+    opc = "C42449363BBAD02B66D16BC975D77CC1";
+    pdu_sessions = ({
+        id = 1;
+        dnn = "oai";
+        nssai_sst = 1;
+        nssai_sd = 0xffffff;
+        type = "IPV4";
+    }, {
+        id = 2;
+        dnn = "openairinterface";
+        nssai_sst = 1;
+        nssai_sd = 0xffffff;
+        type = "IPV4V6";
+    }, {
+        id = 3;
+        dnn = "ims";
+        nssai_sst = 1;
+        nssai_sd = 0xffffff;
+        type = "IPV4V6";
+    }, {
+        id = 4;
+        dnn = "default";
+        nssai_sst = 1;
+        nssai_sd = 0xffffff;
+        type = "IPV4V6";
+    });
+}
+position0 = {
+    x = 0.0;
+    y = 0.0;
+    z = 6377900.0;
+}
+@include "channelmod_rfsimu_LEO_satellite.conf"
+
+
+
+
 ```
 UICC = Universal Integrated Circuit Card, the software representation of the
 SIM/USIM in OAI.
